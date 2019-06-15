@@ -6,7 +6,7 @@ return <View style={styles.containerStyle}>{props.children}</View>;
 const styles = {
 containerStyle: {
 borderBottomWidth: 1,
-padding: 5,
+padding: 20,
 backgroundColor: "#fff",
 justifyContents: "flex-end",
 flexDirection: "row",

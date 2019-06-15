@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View,Image,Text,Button } from "react-native";
-// import the firebase third party lib
+import { Card, CardSection, Input} from "./components/common";
 
 import firebase from "firebase";
 // Custom Components to be used in the app
@@ -9,7 +9,7 @@ import { Header } from "./components/common";
 import LoginForm from "./components/LoginForm";
 
 class App extends Component {
-// Life cycle method to init the firebase
+
 componentWillMount() {
 firebase.initializeApp({
     apiKey: "AIzaSyBsaXqqEioMPhYrSdSrSd3mCwK0sUHUeAc",
@@ -29,10 +29,28 @@ render() {
 return (
       <View>
         
-        <Header headerText="CLEAN AND GREEN KARACHI"/>
-        <Image source ={require('./components/common/2.jpg')}
-        style = {{marginLeft: 100,marginTop : 50,borderRadius :20}}/>
-        <LoginForm />
+        <Header headerText="Simple Resume"/>
+        <Card>
+        <CardSection>
+          <Input
+            label="OBJECTIVES"
+            />
+            </CardSection>
+            
+           
+        <CardSection>
+          <Input
+            label="EXPERIENCE"
+            />
+            </CardSection>
+            
+            
+        <CardSection>
+          <Input
+            label="EDUCATION SECTION"
+            />
+            </CardSection>
+            </Card>
       </View>
     );
   }
